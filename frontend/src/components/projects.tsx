@@ -31,7 +31,7 @@ const projects = [
         stack: ["Python", "NLP Basics", "API Integration"],
         github: "https://github.com/ShambhaviRanjan/student_chatbot",
         demo: "#contact",
-        image: "/projects/chatbot.png",
+        image: "/projects/student-chatbot.png",
     },
 ];
 
