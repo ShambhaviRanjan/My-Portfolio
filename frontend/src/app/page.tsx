@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { About } from "@/components/about";
+import { BackgroundAnimation } from "@/components/background-animation";
 import { CodeChronicles } from "@/components/code-chronicles";
 import { Contact } from "@/components/contact";
 import { Hero } from "@/components/hero";
@@ -24,11 +25,8 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0B0F17] text-slate-100">
-      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-[#0B0F17]" />
-        <div className="absolute inset-0 opacity-100" style={{ backgroundImage: "radial-gradient(circle at 15% 15%, rgba(212,175,122,0.06) 0%, transparent 45%), radial-gradient(circle at 85% 50%, rgba(168,107,61,0.05) 0%, transparent 50%), radial-gradient(circle at 20% 85%, rgba(45,35,60,0.15) 0%, transparent 50%)" }} />
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "linear-gradient(rgba(148,163,184,0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.09) 1px, transparent 1px), radial-gradient(circle, rgba(148,163,184,0.18) 1px, transparent 1px)", backgroundSize: "120px 120px, 120px 120px, 18px 18px", backgroundPosition: "center center" }} />
-      </div>
+      <BackgroundAnimation />
+
 
       <header className="fixed left-0 right-0 top-0 z-50 w-full border-b border-slate-800/60 bg-[#090d14]/75 shadow-[0_4px_30px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300">
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20">

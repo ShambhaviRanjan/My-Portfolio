@@ -75,3 +75,24 @@ textarea:-webkit-autofill:focus {
   transition: background-color 9999s ease-in-out 0s !important;
   caret-color: #f1f5f9 !important;
 }
+
+@keyframes beam-scan {
+  0% {
+    top: -15%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 115%;
+    opacity: 0;
+  }
+}
+
+.animate-beam-scan {
+  animation: beam-scan 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
