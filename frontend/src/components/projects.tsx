@@ -14,14 +14,14 @@ const projects = [
         image: "/projects/analytics.png",
     },
     {
-        title: "MCA Resource Hub",
-        category: "Full Stack / Academic Platform",
+        title: "Astera Luxe Rentals",
+        category: "Full Stack / Luxury Real Estate",
         description:
-            "Centralized academic portal built to organize, categorize, and structure MCA study resources and course materials for peer collaboration.",
-        stack: ["React.js", "Node.js", "Web Technologies", "UI/UX"],
-        github: "https://github.com/ShambhaviRanjan/MCA-Study-Resource-Hub",
-        demo: "#contact",
-        image: "/projects/mca-hub.png",
+            "A premier high-end residential rental platform featuring curated luxury property showcases, intuitive booking inquiry flows, and an interactive dark-mode user experience.",
+        stack: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "UI/UX"],
+        github: "https://github.com/ShambhaviRanjan/Astera-Luxe-Rentals",
+        demo: "https://astera-luxury-rentals.vercel.app/",
+        image: "/projects/astera-rentals.png",
     },
     {
         title: "Student AI Chatbot",
@@ -79,6 +79,8 @@ export function Projects() {
                                         </a>
                                         <a
                                             href={project.demo}
+                                            target={project.demo.startsWith("http") ? "_blank" : undefined}
+                                            rel={project.demo.startsWith("http") ? "noreferrer" : undefined}
                                             className="rounded-full border border-slate-700 p-2 transition-colors hover:border-[#d4af7a]/70 hover:text-[#d4af7a]"
                                             aria-label={`Open ${project.title} demo`}
                                         >
@@ -113,6 +115,8 @@ export function Projects() {
                                     </a>
                                     <a
                                         href={project.demo}
+                                        target={project.demo.startsWith("http") ? "_blank" : undefined}
+                                        rel={project.demo.startsWith("http") ? "noreferrer" : undefined}
                                         className="inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition-colors hover:text-white"
                                     >
                                         Demo
@@ -133,6 +137,7 @@ export function Projects() {
                                         src={project.image}
                                         alt={project.title}
                                         fill
+                                        priority
                                         className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>
